@@ -8,7 +8,10 @@ export const Content = () => {
       }
 
   return (
-    <p>Let's {handleNameChange()} Money</p>
+    <main>
+            <p>Let's {handleNameChange()} Money</p>
+    </main>
+
   )
 }
 
