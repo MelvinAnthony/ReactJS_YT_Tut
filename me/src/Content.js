@@ -2,26 +2,48 @@ import React from 'react'
 
 import { useState } from 'react'
 
+import { FaTrashAlt } from "react-icons/fa"
+
 export const Content = () => {
+    const [items, setItems] = useState([
+        {
+            id:1,
+            checket: true,
+            item:"pratice Coding"
+        },
+        {
+            id:2,
+            checket: false,
+            item:"play Cricket"
+        },
+        {
+            id:3,
+            checked: false,
+            item:"Read About AI"
+        }
+    ]);
 
-    useState();
-    useState();
-    useState();
-    useState();
-    
-    const [name, setName] = useState("Earn");
-    function handleNameChange(){
-        const names = ["Earn", "Grow", "Give"]
-        const int = Math.floor(Math.random()*3)
-        setName(names[int])
-      }
-
+/*     const numbers = [-2,-1,0,1,2,3,4]
+    const itemss = numbers.filter(n => n>=0).map( n => ({number:n}))
+    console.log(itemss) */
 
   return (
     <main>
-            <p>Let's {name} Money</p>
-            <button onClick={handleNameChange}>Subscribe</button>
-
+        <ul>
+            {items.map((item) => (
+              <li className='item'>
+                  <input 
+                  type="checkbox"
+                  checked = {item.checked}                  
+                  />
+                  <label>{item.item}</label>
+                  <FaTrashAlt 
+                    role='button'
+                    tabIndex='0'                  
+                  />
+              </li>
+            ))}
+        </ul>
     </main>
 
   )
