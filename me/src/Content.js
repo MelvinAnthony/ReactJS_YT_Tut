@@ -22,7 +22,8 @@ export const Content = () => {
             <button onClick={handleClick}>Subscribe</button>
             <button onDoubleClick={() => handleClick2('melvin')}>Un Subscribe</button>   
 
-            <button onClick={(e) => (e) => handleClick(e)}>Watch More</button> 
+            <button onClick={(e) => handleClick(e)}>Watch More</button> 
+
 
     </main>
 
